@@ -13,7 +13,7 @@ from ryu.topology.api import get_switch,get_link
 import networkx as nx
 
 class ShortPath(app_manager.RyuApp):
-    """test"""
+    """shortest path based networkx module"""
 
     OFP_VERSIONS = [ofproto_v1_3.OFP_VERSION]
 
@@ -90,7 +90,7 @@ class ShortPath(app_manager.RyuApp):
             next_hop = path[path.index(dpid)+1]
             out_port = self.network[dpid][next_hop]['port']
             print "out_port-> ",out_port
-            print 'path-> ',path
+            print 'path-path- ',path
         else:
             out_port = datapath.ofproto.OFPP_FLOOD
         return out_port
